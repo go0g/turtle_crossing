@@ -21,4 +21,5 @@ game_run = True
 
 while game_run:
     screen.update()
+    print(player.is_finish())
     time.sleep(0.1)
