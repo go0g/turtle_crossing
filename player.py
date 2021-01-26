@@ -9,6 +9,9 @@ class Player(Turtle):
     # Create a Player-Turtle
     def __init__(self):
         super().__init__()
+        self.reset_player()
+
+    def reset_player(self):
         self.penup()
         self.sety(START_POSITION)
         self.setheading(90)
