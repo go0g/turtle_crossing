@@ -2,6 +2,7 @@ from turtle import Screen
 import time
 
 from player import Player
+from scoreboard import Scoreboard
 
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 600
@@ -11,6 +12,7 @@ screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
 screen.tracer(0)
 
 player = Player()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(player.move, 'w')
