@@ -17,3 +17,9 @@ class Scoreboard(Turtle):
         self.level += 1
         self.write_score()
 
+class GameOverScreen(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.hideturtle()
+        self.penup()
+        self.write("THE TURTLE IS DEAD \n Press x for exit", False, align='center', font=("Arial", 16, "normal"))

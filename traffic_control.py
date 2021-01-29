@@ -6,7 +6,7 @@ START_POSITION = 300
 END_POSITION = -320
 
 
-class TrafficControl():
+class TrafficControl:
     def __init__(self):
         self.cars = []
         self.tick_counter = 0
@@ -18,7 +18,12 @@ class TrafficControl():
 
     def remove_cars(self):
         self.cars = list(filter(lambda car: car.xcor() > -350, self.cars))
-        print(len(self.cars))
+
+    def collision_control(self, player_position):
+        near_cars = list(filter(lambda car: car.distance(player_position)< 20, self.cars))
+        for car in near_cars:
+            print(f"car: {car.position()} / player: {player_position.position()}")
+        return len(near_cars) > 0
 
     def move(self):
         self.tick_counter += 1

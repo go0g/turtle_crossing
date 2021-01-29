@@ -16,9 +16,11 @@ class Player(Turtle):
         self.sety(START_POSITION)
         self.setheading(90)
         self.shape('turtle')
+        self.color('pink')
 
     def move(self):
         self.forward(MOVE_SPEED)
+        # print(f"xcor: {round(self.xcor())} ycor: {self.ycor()}")
 
     def is_finish(self):
         return self.ycor() > END_POSITION
